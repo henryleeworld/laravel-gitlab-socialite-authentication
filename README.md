@@ -1,6 +1,6 @@
-# Laravel 8 通過 OAuth 進行 Gitlab 身份驗證
+# Laravel 9 通過 OAuth 進行 GitLab 身份驗證
 
-通過 OAuth 可以使用 Gitlab 帳戶登入網站，如此一來就不必費心記住使用者名稱和密碼。
+通過 OAuth 可以使用 GitLab 帳戶登入網站，如此一來就不必費心記住使用者名稱和密碼。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -20,18 +20,22 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來，例如：http://127.0.0.1:8000。
-- 你可以登入經由 `/login` 來進行登入，點選「使用 Gitlab 登入」以使用 Gitlab 帳戶登入網站。
+- 你可以登入經由 `/login` 來進行登入，點選「使用 GitLab 登入」以使用 GitLab 帳戶登入網站。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/jSYoaEY.png)
-> 透過 Gitlab 帳戶登入，讓你使用 Gitlab 帳戶資訊登入或註冊該網站
+![](https://i.imgur.com/Couy65b.png)
+> 透過 GitLab 帳戶登入，讓你使用 GitLab 帳戶資訊登入或註冊該網站
 
-![](https://i.imgur.com/Xql2tVQ.png)
-> 將你的 Gitlab 帳戶連結到網站帳戶
+![](https://i.imgur.com/h7wBA3h.png)
+> 將你的 GitLab 帳戶連結到網站帳戶
